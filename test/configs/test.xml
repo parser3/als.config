@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<config>
+    <param1>value1</param1>
+    <param2>value2</param2>
+
+    <section>
+        <param1>section.value1</param1>
+        <param2>section.value2</param2>
+
+        <subsection>
+            <param1>section.subsection.value1</param1>
+            <param2>section.subsection.value2</param2>
+        </subsection>
+
+        <subsection2>
+            <param1>section.subsection2.value1</param1>
+            <param2>section.subsection2.value2</param2>
+
+            <subsection3>
+                <param1>section.subsection2.subsection3.value1</param1>
+                <param2>section.subsection2.subsection3.value2</param2>
+            </subsection3>
+
+            <subsection4></subsection4>
+
+            <subsection5>
+                <param1></param1>
+                <param2></param2>
+            </subsection5>
+        </subsection2>
+    </section>
+</config>

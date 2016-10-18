@@ -1,0 +1,22 @@
+{
+  "name": "Parser3 Config Manager",
+  "description": "",
+
+  "path": "als/config",
+  "type": "package",
+
+  "license": "",
+  "keywords": [],
+
+  "homepage": "",
+  "authors": {},
+  "support": {},
+
+  "require": {},
+  "require-dev": {},
+
+  "autoload": {},
+  "autoload-dev": {},
+
+  "extra": {}
+}
