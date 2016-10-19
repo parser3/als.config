@@ -1,0 +1,6 @@
+{
+  "name": "als/config",
+  "description": "Config manager.",
+  "keywords": ["Parser3", "Config"],
+  "type": "library"
+}
