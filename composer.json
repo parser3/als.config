@@ -1,6 +1,19 @@
 {
   "name": "als/config",
+  "type": "library",
   "description": "Config manager.",
-  "keywords": ["Parser3", "Config"],
-  "type": "library"
+  "keywords": ["parser3", "config"],
+  "homepage": "https://github.com/parser3/config",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Leonid Knyazev",
+      "email": "leonid@knyazev.me",
+      "homepage": "https://knyazev.me",
+      "role": "Developer"
+    }
+  ],
+  "autoload": {
+    "files": ["als/config/src"]
+  }
 }
