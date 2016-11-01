@@ -14,6 +14,8 @@
     }
   ],
   "autoload": {
-    "files": ["als/config/src"]
+    "parser": {
+      "als/config": "als/config/src"
+    }
   }
 }
