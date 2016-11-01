@@ -15,7 +15,7 @@
   ],
   "autoload": {
     "parser": {
-      "als/config": "als/config/src"
+      "als/config": "src"
     }
   }
 }
