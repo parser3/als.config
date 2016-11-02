@@ -14,8 +14,8 @@
     }
   ],
   "autoload": {
-    "parser": {
-      "als/config": "src"
+    "psr-4": {
+      "Als\\Config\\": ["src/"]
     }
   }
 }
