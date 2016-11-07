@@ -2,7 +2,7 @@
 # $ID: Ini.p, 9 Sep 2016 16:53, Leonid 'n3o' Knyazev $
 ###############################################################################
 @CLASS
-als/config/reader/Ini
+Als/Config/Reader/Ini
 
 
 @OPTIONS

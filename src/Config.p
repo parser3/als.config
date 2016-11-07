@@ -2,7 +2,7 @@
 # $ID: Config.p, 23 Aug 2016 15:16, Leonid 'n3o' Knyazev $
 ###############################################################################
 @CLASS
-als/config/Config
+Als/Config
 
 
 @OPTIONS
@@ -20,10 +20,10 @@ $self.params[^hash::create[
 ^self._configure[$params]
 
 # @{object} [configs] Configs storage.
-$self.configs[^als/config/Cache::create[]]
+$self.configs[^Als/Config/Cache::create[]]
 
 # @{object} [reader]
-$self.reader[^als/config/Reader::create[]]
+$self.reader[^Als/Config/Reader::create[]]
 
 # process autoload
 ^if(def $self.params.configs){

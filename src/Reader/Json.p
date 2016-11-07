@@ -2,7 +2,7 @@
 # $ID: Json.p, 9 Sep 2016 16:54, Leonid 'n3o' Knyazev $
 ###############################################################################
 @CLASS
-als/config/reader/Json
+Als/Config/Reader/Json
 
 
 @OPTIONS

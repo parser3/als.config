@@ -12,7 +12,10 @@ work.xml
 .idea
 .sass-cache
 
+composer.phar
+
 node_modules
+temp
 
 *.*~
 *.bak

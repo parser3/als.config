@@ -2,7 +2,7 @@
 # $ID: Xml.p, 9 Sep 2016 16:55, Leonid 'n3o' Knyazev $
 ###############################################################################
 @CLASS
-als/config/reader/Xml
+Als/Config/Reader/Xml
 
 
 @OPTIONS

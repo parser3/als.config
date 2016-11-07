@@ -1,21 +1,41 @@
 {
-  "name": "als/config",
-  "type": "library",
-  "description": "Config manager.",
-  "keywords": ["parser3", "config"],
-  "homepage": "https://github.com/parser3/config",
-  "license": "MIT",
-  "authors": [
-    {
-      "name": "Leonid Knyazev",
-      "email": "leonid@knyazev.me",
-      "homepage": "https://knyazev.me",
-      "role": "Developer"
+    "name": "als/config",
+    "type": "library",
+    "description": "Config Manager Component.",
+    "keywords": [
+        "als",
+        "parser3",
+        "config"
+    ],
+    "homepage": "https://github.com/parser3/als.config",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Leonid Knyazev",
+            "email": "leonid@knyazev.me",
+            "homepage": "https://knyazev.me",
+            "role": "Developer"
+        }
+    ],
+    "support": {
+        "issues": "https://github.com/parser3/als.config/issues"
+    },
+    "require": {
+        "als/path": "^0.1"
+    },
+    "autoload": {
+        "psr-4": {
+            "Als\\Config\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Als\\Config\\Tests\\": "tests/"
+        }
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "0.1.x-dev"
+        }
     }
-  ],
-  "autoload": {
-    "psr-4": {
-      "Als\\Config\\": ["src/"]
-    }
-  }
 }

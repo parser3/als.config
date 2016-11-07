@@ -2,7 +2,7 @@
 # $ID: Reader.p, 9 Sep 2016 16:44, Leonid 'n3o' Knyazev $
 ###############################################################################
 @CLASS
-als/config/Reader
+Als/Config/Reader
 
 
 @OPTIONS
@@ -14,13 +14,13 @@ locals
 @create[]
 # @{hash} [readers]
 $self.readers[^hash::create[
-	$.ini[als/config/reader/Ini]
-	$.xml[als/config/reader/Xml]
-	$.json[als/config/reader/Json]
+	$.ini[Als/Config/Reader/Ini]
+	$.xml[Als/Config/Reader/Xml]
+	$.json[Als/Config/Reader/Json]
 ]]
 
 # @{object} [cache]
-$self.cache[^als/config/Cache::create[
+$self.cache[^Als/Config/Cache::create[
 	$.mode[flat]
 ]]
 #end @create[]

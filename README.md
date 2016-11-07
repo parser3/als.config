@@ -1,13 +1,6 @@
-<!-- Badges URLs for 'master' and 'develop' branches -->
-[master-badge]:    /../badges/master/build.svg   "Master build status"
-[master-commits]:  /../commits/master            "Master last commits"
-[develop-badge]:   /../badges/develop/build.svg  "Develop build status"
-[develop-commits]: /../commits/develop           "Develop last commits"
+# Als/Config
 
-
-# Config | [![master-badge][]][master-commits] | [![develop-badge][]][develop-commits]
-
-Config Manager.
+Config Manager Component.
 
 ---
 
@@ -20,8 +13,8 @@ provides adapters that read configuration data stored in INI, JSON and XML files
 ## Пример использования
 
 ```ruby
-# Создаем объект класса 'als/config/Config':
-$config[^als/config/Config::create[]]
+# Создаем объект класса 'Als/Config':
+$config[^Als/Config::create[]]
 
 
 # Читаем конфиги из файлов:
@@ -44,8 +37,8 @@ $json[$config.config_json]
 ## Параметры создания объекта
 
 ```ruby
-# При создании объекта класса 'als/config/Config', мы можем указать папку с конфигами:
-$config[^als/config/Config::create[
+# При создании объекта класса 'Als/Config', мы можем указать папку с конфигами:
+$config[^Als/Config::create[
 	$.root[/path/to/configs]
 ]]
 
@@ -53,13 +46,13 @@ $config[^als/config/Config::create[
 ^config.read[database.xml]
 
 
-# Так, же при создании объекта класса 'als/config/Config', мы можем указать список
+# Так, же при создании объекта класса 'Als/Config', мы можем указать список
 # конфигов, которые будут автоматически загружены во время создания экземпляра класса:
 #
 # Аргумент $.configs[] передается в виде хеша, в котором:
 #  'ключ'     - это ключ по которому будут доступны данные конфига в объекте класса
 #  'значение' - путь к файлу с конфигурационными данными
-$config[^als/config/Config::create[
+$config[^Als/Config::create[
 	$.configs[
 		$.cache[cache.ini]
 		$.database[database.xml]
@@ -72,8 +65,8 @@ $config[^als/config/Config::create[
 ## Методы доступа к конфигурационным данным
 
 ```ruby
-# Создаем объект класса 'als/config/Config':
-$config[^als/config/Config::create[]]
+# Создаем объект класса 'Als/Config':
+$config[^Als/Config::create[]]
 
 # Читам конфигурационные данные из файла 'database.json', со следующим содержимым:
 #  {
@@ -218,7 +211,7 @@ param2=
 
 ## References
 
-- Questions to [Leonid Knyazev](@n3o) | <leonid@knyazev.me> | <n3o@design.ru>
-- Bug reports and Feature requests to [Issues](https://gitlab.design.ru/als/config/issues)
+- Questions to <leonid@knyazev.me> | <n3o@design.ru>
+- Bug reports and Feature requests to Issues.
 
 ---

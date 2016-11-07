@@ -2,7 +2,7 @@
 # $ID: Cache.p, 9 Sep 2016 15:31, Leonid 'n3o' Knyazev $
 ###############################################################################
 @CLASS
-als/config/Cache
+Als/Config/Cache
 
 
 @OPTIONS
