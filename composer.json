@@ -23,6 +23,9 @@
     "require": {
         "als/path": "^0.1"
     },
+    "require-dev": {
+        "parser/autoload": "^0.1"
+    },
     "autoload": {
         "psr-4": {
             "Als\\Config\\": "src/"
@@ -30,7 +33,7 @@
     },
     "autoload-dev": {
         "psr-4": {
-            "Als\\Config\\Tests\\": "tests/"
+            "Als\\Config\\Test\\": "test/"
         }
     },
     "extra": {
