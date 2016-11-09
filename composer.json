@@ -23,7 +23,7 @@
         }
     },
     "require-dev": {
-        "parser/conposer": "~1.0"
+        "parser/composer": "~1.0"
     },
     "autoload-dev": {
         "psr-4": {
