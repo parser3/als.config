@@ -2,11 +2,7 @@
     "name": "als/config",
     "type": "library",
     "description": "Config Manager Component.",
-    "keywords": [
-        "als",
-        "parser3",
-        "config"
-    ],
+    "keywords": ["als", "config"],
     "homepage": "https://github.com/parser3/als.config",
     "license": "MIT",
     "authors": [
@@ -21,13 +17,13 @@
         "issues": "https://github.com/parser3/als.config/issues"
     },
     "require": {},
-    "require-dev": {
-        "parser/autoload": "~1.0"
-    },
     "autoload": {
         "psr-4": {
             "Als\\Config\\": "src/"
         }
+    },
+    "require-dev": {
+        "parser/conposer": "~1.0"
     },
     "autoload-dev": {
         "psr-4": {
