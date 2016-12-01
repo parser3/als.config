@@ -37,10 +37,12 @@ $self.reader[^Als/Config/Reader::create[]]
 # @PUBLIC
 ###############################################################################
 @get[name;default]
-$result[^self.configs.get[$name]]
-
-^if(!def $result && def $default){
+^if(^self.configs.has[$name]){
+	$result[^self.configs.get[$name]]
+}(def $default){
 	$result[$default]
+}{
+	^throw[not.found;$self.CLASS_NAME;Config key '$name' not found.]
 }
 #end @get[]
 
@@ -49,6 +51,12 @@ $result[^self.configs.get[$name]]
 @set[name;data]
 $result[^self.configs.set[$name;$data]]
 #end @set[]
+
+
+###############################################################################
+@has[name]
+$result(^self.configs.has[$name])
+#end @has[]
 
 
 ###############################################################################
