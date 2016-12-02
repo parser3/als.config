@@ -41,6 +41,8 @@ $self.reader[^Als/Config/Reader::create[]]
 	$result[^self.configs.get[$name]]
 }(def $default){
 	$result[$default]
+}(!def $name){
+	$result[^self.configs.get[]]
 }{
 	^throw[not.found;$self.CLASS_NAME;Config key '$name' not found.]
 }
@@ -109,7 +111,7 @@ $result(^self.configs.has[$name])
 @_parsePath[path]
 $result[$path]
 
-^if(def $self.params.root){
+^if(def $self.params.root && ^result.left(1) ne "/"){
 	$root[^self.params.root.trim[right;/]]
 
 	^if($result eq "."){
