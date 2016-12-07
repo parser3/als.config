@@ -67,52 +67,70 @@ $result[]
 
 
 ###############################################################################
-@set[name;data]
-$result[]
-
+@set[name;data;current][$result]
 ^switch[$self.params.mode]{
 	^case[tree]{
-		$current[$self.cache]
+		^if(!($current is hash)){
+			^self.set[$name;$data;$self.cache]
+		}(!^current.contains[$name] && ^name.pos[$self.params.separator] == -1){
+			^current.add[
+				$.[$name][$data]
+			]
+		}{
+			^if($data is hash){
+				$current[$current.[$name]]
 
-		$parts[^name.split[$self.params.separator;l]]
-
-		^parts.menu{
-			$part[$parts.piece]
-
-			^if(^current.contains[$part]){
-				^if(^parts.line[] == $parts){
-					^switch[$data.CLASS_NAME]{
-						^case[int;double;bool]{
-							$current.[$part]($data)
-						}
-						^case[DEFAULT]{
-							$current.[$part][$data]
-						}
-					}
+				^data.foreach[_name;_data]{
+					^self.set[$_name;$_data;$current]
 				}
-
-				$current[$current.[$part]]
 			}{
-				^if(^parts.line[] < $parts){
-					^current.add[
-						$.[$part][^hash::create[]]
-					]
-				}{
-					^switch[$data.CLASS_NAME]{
-						^case[int;double;bool]{
-							^current.add[
-								$.[$part]($data)
-							]
-						}
-						^case[DEFAULT]{
-							^current.add[
-								$.[$part][$data]
-							]
+				^if(^name.pos[$self.params.separator] != -1){
+					$parts[^name.split[$self.params.separator;l]]
+
+					^parts.menu{
+						$part[$parts.piece]
+
+						^if(^current.contains[$part]){
+							^if(^parts.line[] == $parts){
+								^switch[$data.CLASS_NAME]{
+									^case[int;double;bool]{
+										$current.[$part]($data)
+									}
+									^case[DEFAULT]{
+										$current.[$part][$data]
+									}
+								}
+							}
+
+							$current[$current.[$part]]
+						}{
+							^if(^parts.line[] < $parts){
+								^current.add[
+									$.[$part][^hash::create[]]
+								]
+							}{
+								^switch[$data.CLASS_NAME]{
+									^case[int;double;bool]{
+										^current.add[
+											$.[$part]($data)
+										]
+									}
+									^case[DEFAULT]{
+										^current.add[
+											$.[$part][$data]
+										]
+									}
+								}
+							}
+
+							$current[$current.[$part]]
 						}
 					}
+				}{
+					^current.add[
+						$.[$name][$data]
+					]
 				}
-
-				$current[$current.[$part]]
 			}
 		}
 	}
