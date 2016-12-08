@@ -51,7 +51,13 @@ $self.reader[^Als/Config/Reader::create[]]
 
 ###############################################################################
 @set[name;data]
-$result[^self.configs.set[$name;$data]]
+^if($name is hash){
+	^name.foreach[_name;_data]{
+		^self.set[$_name;$_data]
+	}
+}{
+	$result[^self.configs.set[$name;$data]]
+}
 #end @set[]
 
 
