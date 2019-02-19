@@ -14,6 +14,7 @@ locals
 @create[]
 # @{hash} [readers]
 $self.readers[^hash::create[
+	$.env[Als/Config/Reader/Ini]
 	$.ini[Als/Config/Reader/Ini]
 	$.xml[Als/Config/Reader/Xml]
 	$.json[Als/Config/Reader/Json]

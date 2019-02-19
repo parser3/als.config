@@ -35,7 +35,7 @@ $result[^hash::create[]]
 		$data[^self._parse[$data]]
 	}
 
-	$sections[^als/config/Cache::create[]]
+	$sections[^Als/Config/Cache::create[]]
 
 	^data.menu{
 		$name[^data.0.trim[]]
